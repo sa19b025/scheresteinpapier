@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-
 import {
   Select,
   SelectContent,
@@ -12,7 +11,7 @@ import {
 
 export default function Header() {
   return (
-    <header className="align-center container mx-auto flex h-[10vh] justify-between text-2xl">
+    <header className="align-center container mx-auto flex h-[10vh] items-center justify-around text-2xl">
       <div className="align-center">
         <Link href="/" className="flex">
           <div className="align-center flex justify-between">
@@ -36,7 +35,12 @@ export default function Header() {
           <Link href="/result" className="p-4">
             Ergebnis
           </Link>
-          <div className="text- flex flex-row items-center">Test</div>
+          <div className="text- flex flex-row items-center">
+            <select className="rounded-lg bg-blue-400 p-2">
+              <option value="de">Deutsch</option>
+              <option value="en">Englisch</option>
+            </select>
+          </div>
         </div>
       </nav>
     </header>
