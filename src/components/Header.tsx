@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+
 import {
   Select,
   SelectContent,
@@ -11,27 +12,31 @@ import {
 
 export default function Header() {
   return (
-    <header className="h-[10vh]">
-      <nav className=" h-[10vh] flex justify-between items-center">
-        <div className="container flex justify-between items-center">
-          <Link href="/" className="text-xl font-semibold flex">
-            <Image src="/logo.png" width={50} height={50} alt="Logo" />
-            <h1 className="p-0 m-0 flex justify-between items-center ml-5">
+    <header className="align-center container mx-auto flex h-[10vh] justify-between text-2xl">
+      <div className="align-center">
+        <Link href="/" className="flex">
+          <div className="align-center flex justify-between">
+            <div>
+              <Image src="/logo.png" width={65} height={65} alt="Logo" />
+            </div>
+            <h1 className="ml-2 flex items-center font-semibold">
               Schere Stein Papier
             </h1>
-          </Link>
-          <div className="flex md:flex space-x-7">
-            <Link href="/" className="hover:text-gray-300">
-              Start
-            </Link>
-            <Link href="/game" className="hover:text-gray-300">
-              Spiel
-            </Link>
-            <Link href="/result" className="hover:text-gray-300">
-              Ergebnis
-            </Link>
-            <div className="flex flex-row"></div>
           </div>
+        </Link>
+      </div>
+      <nav className="flex flex-row justify-center">
+        <div className="flex flex-row justify-center gap-1">
+          <Link href="/" className="p-4">
+            Start
+          </Link>
+          <Link href="/game" className="p-4">
+            Spiel
+          </Link>
+          <Link href="/result" className="p-4">
+            Ergebnis
+          </Link>
+          <div className="text- flex flex-row items-center">Test</div>
         </div>
       </nav>
     </header>
