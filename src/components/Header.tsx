@@ -29,7 +29,7 @@ export default function Header() {
             Ergebnis
           </Link>
           <div className="text- flex flex-row items-center">
-            <select className="rounded-lg bg-blue-100 p-2">
+            <select className="rounded-lg bg-blue-100 p-2 text-lg">
               <option value="de">Deutsch</option>
               <option value="en">Englisch</option>
             </select>
