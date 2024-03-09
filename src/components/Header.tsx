@@ -1,13 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 
 export default function Header() {
   return (
