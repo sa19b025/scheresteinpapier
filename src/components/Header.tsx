@@ -1,8 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+import { Locale } from '@/i18n.config'
+import { getDictionary } from '@/lib/dictionary'
 
-export default function Header() {
+export default async function Header({ lang }: { lang: Locale }) {
+  const { header } = await getDictionary(lang)
+
   return (
     <header className="align-center container mx-auto flex h-[10vh] items-center justify-around text-2xl">
       <div className="align-center">
@@ -37,5 +41,5 @@ export default function Header() {
         </div>
       </nav>
     </header>
-  );
+  )
 }

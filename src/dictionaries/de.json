@@ -1,0 +1,25 @@
+{
+    "header": {
+      "home": "Start",
+      "about": "Spiel",
+      "result": "Ergebnis"
+    },
+    "footer":{
+      "project": "Bachelorprojekt"
+    },
+    "page": {
+      "home": {
+        "title": "Willkommen blabla",
+        "description": "... Beschreibung folgt ...",
+        "playButton": "Spielen"
+      },
+      "game": {
+        "title": "Spiel",
+        "description": "Dies ist die Spiel-Seite"
+      },
+      "result": {
+        "title": "Ergebnis",
+        "description": "Dies ist die Ergebnis-Seite"
+      }
+    }
+}

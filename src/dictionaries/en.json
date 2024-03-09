@@ -1,0 +1,25 @@
+{
+    "header": {
+      "home": "Home",
+      "about": "Game",
+      "result": "Result"
+    },
+    "footer": {
+        "project": "Bachelorproject"
+    },
+    "page": {
+      "home": {
+        "title": "Welcome blabla",
+        "description": "... description follows ...",
+        "playButton": "Play"
+      },
+      "game": {
+        "title": "Game",
+        "description": "This is the game page"
+      },
+      "result": {
+        "title": "Result",
+        "description": "This is the result page"
+      }
+    }
+}
