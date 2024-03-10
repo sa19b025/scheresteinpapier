@@ -28,6 +28,6 @@
     ".next/types/**/*.ts",
     "src/components/LocaleSwitcher.tsx",
     "src/components/LocaleSwitcherTest.tsx"
-  ],
+, "src/components/Select.jsx"  ],
   "exclude": ["node_modules"]
 }
