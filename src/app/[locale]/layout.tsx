@@ -4,7 +4,6 @@ import "./globals.css";
 import styles from "./styles/styles.module.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Locale, i18n } from "@/i18n.config";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,23 +12,19 @@ export const metadata: Metadata = {
   description: "Created with next.js",
 };
 
-export async function generateStaticParams() {
-  return i18n.locales.map(locale => ({ lang: locale }))
-}
-
-export default function RootLayout({
+export default function LocaleLayout({
   children,
-  params,
-}: Readonly<{
+  params: { locale },
+}: {
   children: React.ReactNode;
-  params: { lang: Locale };
-}>) {
+  params: { locale: string };
+}) {
   return (
-    <html lang={params.lang}>
+    <html lang={locale}>
       <body className={inter.className}>
-        <Header lang={params.lang} />
+        <Header />
         <main className="h-[80vh]">{children}</main>
-        <Footer lang={params.lang} />
+        <Footer />
       </body>
     </html>
   );

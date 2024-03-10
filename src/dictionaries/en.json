@@ -1,25 +1,28 @@
 {
-    "header": {
-      "home": "Home",
-      "about": "Game",
-      "result": "Result"
+  "header": {
+    "title": "Rock Paper Scissors",
+    "home": "Home",
+    "game": "Game",
+    "result": "Result",
+    "de": "German",
+    "en": "English"
+  },
+  "footer": {
+    "project": "Bachelorproject"
+  },
+  "page": {
+    "home": {
+      "title": "Welcome blabla",
+      "description": "... description follows ...",
+      "playButton": "Play"
     },
-    "footer": {
-        "project": "Bachelorproject"
+    "game": {
+      "title": "Game",
+      "description": "This is the game page"
     },
-    "page": {
-      "home": {
-        "title": "Welcome blabla",
-        "description": "... description follows ...",
-        "playButton": "Play"
-      },
-      "game": {
-        "title": "Game",
-        "description": "This is the game page"
-      },
-      "result": {
-        "title": "Result",
-        "description": "This is the result page"
-      }
+    "result": {
+      "title": "Result",
+      "description": "This is the result page"
     }
+  }
 }
