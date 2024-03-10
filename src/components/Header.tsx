@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import { useLocale, useTranslations } from "next-intl";
+import LanguageSwitch from "./LanguageSwitch";
 
 export default function Header() {
   const locale = useLocale();
@@ -36,6 +37,7 @@ export default function Header() {
             {t("result")}
           </Link>
         </div>
+        <LanguageSwitch />
       </nav>
     </header>
   );

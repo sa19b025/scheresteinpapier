@@ -11,9 +11,17 @@
     "project": "Bachelorproject"
   },
   "home": {
-    "title": "Welcome blabla",
-    "description": "... description follows ...",
-    "playButton": "Play"
+    "title": "Welcome to Rock Paper Scissors!",
+    "descriptionP1": "Here you have the opportunity to play Rock Paper Scissors using your camera.",
+    "descriptionP2": "How does it work?",
+    "descriptionP3": "After clicking the Play button, you will be taken to the next page where you will see your camera image, the AI's assessment of which symbol you are showing, and a trigger button.",
+    "descriptionP4": "When the trigger button is pressed, a 5-second timer starts. The prediction made by the AI after this timer expires will be used.",
+    "descriptionP5": "For the computer as your opponent, a random value is generated to determine the result.",
+    "descriptionP6": "This will then be displayed on the results page. There you will also see your overall score.",
+    "descriptionP7": "Have fun playing!",
+    "playButton": "Play",
+    "rulesTitle": "Rules:",
+    "rules": "Rock beats scissors, scissors cut paper, paper wraps rock."
   },
   "game": {
     "title": "Game",
@@ -22,5 +30,9 @@
   "result": {
     "title": "Result",
     "description": "This is the result page"
+  },
+  "language": {
+    "altText": "German Flag",
+    "changeText": "Change to "
   }
 }
