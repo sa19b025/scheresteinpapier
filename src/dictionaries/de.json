@@ -25,7 +25,9 @@
   },
   "game": {
     "title": "Spiel",
-    "description": "Dies ist die Spiel-Seite"
+    "description": "Dies ist die Spiel-Seite",
+    "kamera": "Auslöser",
+    "predictionText": "Schätzung der KI: "
   },
   "result": {
     "title": "Ergebnis",

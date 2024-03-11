@@ -25,7 +25,9 @@
   },
   "game": {
     "title": "Game",
-    "description": "This is the game page"
+    "description": "This is the game page",
+    "kamera": "Shutter",
+    "predictionText": "AI Prediction: "
   },
   "result": {
     "title": "Result",
