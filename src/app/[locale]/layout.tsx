@@ -97,7 +97,7 @@ export default function LocaleLayout({
       </head>
       <body className={inter.className}>
         <Header />
-        <main className="h-[80vh]">{children}</main>
+        <main className="h-[80vh] px-3">{children}</main>
         <Footer />
       </body>
     </html>
