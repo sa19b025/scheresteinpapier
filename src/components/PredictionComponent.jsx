@@ -3,7 +3,6 @@
 import React, { useRef } from "react";
 import Webcam from "react-webcam";
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import aiPrediction from "./aiPrediction";
 
