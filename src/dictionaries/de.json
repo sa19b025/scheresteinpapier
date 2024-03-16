@@ -33,6 +33,9 @@
     "title": "Ergebnis",
     "description": "Dies ist die Ergebnis-Seite"
   },
+  "resultButton": {
+    "resultButton": "Weiter"
+  },
   "language": {
     "altText": "Englische Flagge",
     "changeText": "Change to "

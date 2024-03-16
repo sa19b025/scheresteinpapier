@@ -1,5 +1,13 @@
-import * as tf from "@tensorflow/tfjs";
 import * as tmImage from "@teachablemachine/image";
+
+// Preview the Model: https://teachablemachine.withgoogle.com/models/CoWEt_sY5/
+
+//Model Training Data:
+
+// https://www.kaggle.com/datasets/drgfreeman/rockpaperscissors/data
+// https://www.kaggle.com/datasets/sanikamal/rock-paper-scissors-dataset
+// https://www.kaggle.com/datasets/glushko/rock-paper-scissors-dataset
+// and my own images
 
 export default async function aiPrediction(image) {
   const modelPath = "/AI/model.json";

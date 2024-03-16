@@ -33,6 +33,9 @@
     "title": "Result",
     "description": "This is the result page"
   },
+  "resultButton": {
+    "resultButton": "Next"
+  },
   "language": {
     "altText": "German Flag",
     "changeText": "Wechseln auf "

@@ -3,12 +3,18 @@
 import React, { useRef } from "react";
 import Webcam from "react-webcam";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { useLocale, useTranslations } from "next-intl";
+import ResultButton from "@/components/ResultButton";
 import aiPrediction from "./aiPrediction";
 
 const WebcamCapture = () => {
+  const locale = useLocale();
+  const resultUrl = "/" + locale + "/result";
   const webcamRef = React.useRef(null);
   const [imgSrc, setImgSrc] = React.useState(null);
+  const [prediction, setPrediction] = React.useState(null);
   const screenshotSrc = useRef("initialValue");
   const data = useRef("");
   const capture = React.useCallback(() => {
@@ -20,26 +26,19 @@ const WebcamCapture = () => {
   if (data.current !== "initialValue") {
     aiPrediction(screenshotSrc.current)
       .then((result) => {
-        data.current = result;
+        setPrediction(result);
       })
       .catch((error) => {
         console.error("Error during prediction:", error);
       });
   }
 
-  // Convert the string to an object
-  const resultObject = data.current.split(",").reduce((acc, item) => {
-    const [key, value] = item.split(":").map((s) => s.trim()); // Split by ':' and trim spaces
-    acc[key] = parseFloat(value); // Convert string value to a number
-    return acc;
-  }, {});
-
-  console.log(resultObject);
-
   return (
     <>
       <div className="flex flex-col items-center justify-center gap-4">
-        <Webcam audio={false} ref={webcamRef} screenshotFormat="image/jpeg" />
+        {!imgSrc && (
+          <Webcam audio={false} ref={webcamRef} screenshotFormat="image/jpeg" />
+        )}
         {!imgSrc && (
           <Button onClick={capture} id="firstButton">
             Capture photo
@@ -54,8 +53,17 @@ const WebcamCapture = () => {
             height={450}
           />
         )}
-        {data.current && <p>{data.current}</p>}
+        {imgSrc && (
+          <div>
+            <p>{prediction}</p>
+          </div>
+        )}
       </div>
+      <Link
+        href={`${resultUrl}?state=${encodeURIComponent(JSON.stringify(prediction))}`}
+      >
+        <ResultButton />
+      </Link>
     </>
   );
 };

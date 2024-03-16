@@ -1,12 +1,11 @@
 import React from "react";
-import { useTranslations } from "next-intl";
 
-export default function Result() {
-  const t = useTranslations("result");
+function Result(props: any) {
   return (
-    <div className="flex h-[80vh] items-center justify-center">
-      <h1>{t("title")}</h1>
-      <p>{t("description")}</p>
+    <div>
+      <p>State variable from parent component: {props.stateProp}</p>
     </div>
   );
 }
+
+export default Result;
