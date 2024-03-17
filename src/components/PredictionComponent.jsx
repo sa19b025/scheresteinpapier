@@ -8,13 +8,14 @@ import { Button } from "@/components/ui/button";
 import { useLocale, useTranslations } from "next-intl";
 import ResultButton from "@/components/ResultButton";
 import aiPrediction from "./aiPrediction";
+import { usePredictionStore } from "@/components/predictionState";
 
 const WebcamCapture = () => {
-  const locale = useLocale();
-  const resultUrl = "/" + locale + "/result";
   const webcamRef = React.useRef(null);
   const [imgSrc, setImgSrc] = React.useState(null);
-  const [prediction, setPrediction] = React.useState(null);
+
+  const { prediction, setPrediction } = usePredictionStore();
+
   const screenshotSrc = useRef("initialValue");
   const data = useRef("");
   const capture = React.useCallback(() => {
@@ -59,11 +60,7 @@ const WebcamCapture = () => {
           </div>
         )}
       </div>
-      <Link
-        href={`${resultUrl}?state=${encodeURIComponent(JSON.stringify(prediction))}`}
-      >
-        <ResultButton />
-      </Link>
+      <ResultButton />
     </>
   );
 };

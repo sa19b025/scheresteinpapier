@@ -4,13 +4,12 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { ContextProvider } from "@/components/MeinContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Rock paper scissors",
-  description: "Created with next.js",
+  description: "",
 };
 
 export default function LocaleLayout({
@@ -21,7 +20,7 @@ export default function LocaleLayout({
   params: { locale: string };
 }) {
   return (
-    <ContextProvider>
+    <>
       <html lang={locale}>
         <head>
           <link
@@ -103,6 +102,6 @@ export default function LocaleLayout({
           <Footer />
         </body>
       </html>
-    </ContextProvider>
+    </>
   );
 }

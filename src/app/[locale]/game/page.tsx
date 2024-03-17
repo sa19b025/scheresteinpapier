@@ -2,6 +2,7 @@ import React from "react";
 import PredictionComponent from "@/components/PredictionComponent";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { usePredictionStore } from "@/components/predictionState";
 
 export default function Game() {
   return (

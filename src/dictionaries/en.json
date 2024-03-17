@@ -33,7 +33,7 @@
     "title": "Result",
     "description": "This is the result page"
   },
-  "resultButton": {
+  "resultButtonComp": {
     "resultButton": "Next"
   },
   "language": {

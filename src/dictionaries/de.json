@@ -33,7 +33,7 @@
     "title": "Ergebnis",
     "description": "Dies ist die Ergebnis-Seite"
   },
-  "resultButton": {
+  "resultButtonComp": {
     "resultButton": "Weiter"
   },
   "language": {

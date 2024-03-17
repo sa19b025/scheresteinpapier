@@ -1,15 +1,18 @@
 import { useTranslations } from "next-intl";
 import React from "react";
+import { Button } from "./ui/button";
+import Link from "next/link";
 
-function resultButton() {
-  //   const t = useTranslations("rsB");
+const ResultButton = () => {
+  const resultUrl = "/de/result";
 
   return (
     <>
-      <h1>test</h1>
-      <div>Weiter</div>
+      <Link href={resultUrl}>
+        <Button>ResultButton</Button>
+      </Link>
     </>
   );
-}
+};
 
-export default resultButton;
+export default ResultButton;
