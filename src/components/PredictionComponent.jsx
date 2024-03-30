@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { useLocale, useTranslations } from "next-intl";
 import ResultButton from "@/components/ResultButton";
 import aiPrediction from "./aiPrediction";
-import { usePredictionStore } from "@/components/predictionState";
+import { usePredictionStore } from "@/components/variableState";
 
 const WebcamCapture = () => {
   const webcamRef = React.useRef(null);
@@ -59,8 +59,12 @@ const WebcamCapture = () => {
             <p>{prediction}</p>
           </div>
         )}
+        {imgSrc && (
+          <div>
+            <ResultButton />
+          </div>
+        )}
       </div>
-      <ResultButton />
     </>
   );
 };
