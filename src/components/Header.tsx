@@ -7,9 +7,9 @@ import LanguageSwitch from "./LanguageSwitch";
 export default function Header() {
   const locale = useLocale();
   const t = useTranslations("header");
-  const home = "/" + locale + "/";
-  const game = "/" + locale + "/game";
-  const result = "/" + locale + "/result";
+  const mouseUrl = "/" + locale + "/mousegame";
+  const keyboardUrl = "/" + locale + "/keyboardgame";
+  const aiUrl = "/" + locale + "/aigame";
 
   return (
     <header className="align-center container mx-auto flex h-[10vh] items-center justify-around text-2xl">
@@ -27,14 +27,14 @@ export default function Header() {
       </div>
       <nav className="flex flex-row justify-center">
         <div className="flex flex-row justify-center gap-1">
-          <Link href={home} className="p-4">
-            {t("home")}
+          <Link href={mouseUrl} className="p-4">
+            {t("mouseText")}
           </Link>
-          <Link href={game} className="p-4">
-            {t("game")}
+          <Link href={keyboardUrl} className="p-4">
+            {t("keyboardText")}
           </Link>
-          <Link href={result} className="p-4">
-            {t("result")}
+          <Link href={aiUrl} className="p-4">
+            {t("cameraText")}
           </Link>
         </div>
         <LanguageSwitch />

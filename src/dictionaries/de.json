@@ -1,9 +1,9 @@
 {
   "header": {
     "title": "Schere Stein Papier",
-    "home": "Start",
-    "game": "Spiel",
-    "result": "Ergebnis",
+    "mouseText": "Maus",
+    "keyboardText": "Tastatur",
+    "cameraText": "Kamera",
     "de": "Deutsch",
     "en": "Englisch"
   },
@@ -11,19 +11,28 @@
     "project": "Bachelorprojekt"
   },
   "home": {
-    "title": "Willkommen bei Schere Stein Papier!",
-    "descriptionP1": "Hier haben Sie die Möglichkeit mithilfe Ihrer Kamera Schere Stein Papier zu spielen.",
-    "descriptionP2": "Wie das funktioniert?",
-    "descriptionP3": "Nachdem Sie den Play-Button geklickt haben, kommen Sie auf die nächste Seite wo Ihnen Ihr Kamera-Bild und ein \"Capture\"-Button angezeigt werden.",
-    "descriptionP4": "Wenn der Auslöser Button gedrückt wird",
-    "descriptionP5": "Für den Computer als Ihren Gegenspieler wird ein Zufallswert generiert mit dem das Ergbnis dann bestimmt wird.",
-    "descriptionP6": "",
-    "descriptionP7": "Viel Spaß beim Spielen!",
-    "playButton": "Spielen",
+    "title": "Willkommen bei Schere, Stein, Papier!",
+    "description": "Hier können Sie Ihr Eingabegerät auswählen.",
+    "mouseImageAlt": "Maus Abbildung",
+    "mouseText": "Maus",
+    "keyboardImageAlt": "Tastatur Abbildung",
+    "keyboardText": "Tastatur",
+    "cameraImageAlt": "Kamera Abbildung",
+    "cameraText": "Kamera",
     "rulesTitle": "Regeln:",
     "rules": "Stein schlägt Schere, Schere schneidet Papier, Papier wickelt Stein ein."
   },
-  "game": {
+  "mousegame": {},
+  "keyboardgamecomponent": {
+    "description": "Dies ist der Tastatureingabemodus, drücken Sie die Taste für Ihre Wahl: Stein (R), Papier (P), Schere (S).",
+    "rock": "Stein",
+    "paper": "Papier",
+    "scissors": "Schere",
+    "altRock": "Stein Bild",
+    "altPaper": "Papier Bild",
+    "altScissors": "Schere Bild"
+  },
+  "aigame": {
     "title": "Spiel",
     "description": "Dies ist die Spiel-Seite",
     "kamera": "Auslöser",
@@ -33,7 +42,7 @@
     "title": "Ergebnis",
     "description": "Dies ist die Ergebnis-Seite"
   },
-  "resultButtonComp": {
+  "resultButton": {
     "resultButton": "Weiter"
   },
   "language": {

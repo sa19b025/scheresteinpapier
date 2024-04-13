@@ -5,11 +5,11 @@ import Link from "next/link";
 
 const ResultButton = () => {
   const resultUrl = "/de/result";
-
+  const t = useTranslations("resultButton");
   return (
     <>
       <Link href={resultUrl}>
-        <Button>ResultButton</Button>
+        <Button>{t("btnText")}</Button>
       </Link>
     </>
   );

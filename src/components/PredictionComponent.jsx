@@ -3,7 +3,6 @@
 import React, { useRef } from "react";
 import Webcam from "react-webcam";
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useLocale, useTranslations } from "next-intl";
 import ResultButton from "@/components/ResultButton";
@@ -15,6 +14,8 @@ const WebcamCapture = () => {
   const [imgSrc, setImgSrc] = React.useState(null);
 
   const { prediction, setPrediction } = usePredictionStore();
+
+  const t = useTranslations("PredictionComponent");
 
   const screenshotSrc = useRef("initialValue");
   const data = useRef("");
@@ -30,7 +31,7 @@ const WebcamCapture = () => {
         setPrediction(result);
       })
       .catch((error) => {
-        console.error("Error during prediction:", error);
+        console.error(`{t("errormsg")}`, error); //"Error during prediction:"
       });
   }
 
@@ -42,7 +43,7 @@ const WebcamCapture = () => {
         )}
         {!imgSrc && (
           <Button onClick={capture} id="firstButton">
-            Capture photo
+            {t("captureButton")}
           </Button>
         )}
         {imgSrc && (

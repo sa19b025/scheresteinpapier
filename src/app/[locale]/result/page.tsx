@@ -1,97 +1,84 @@
-"use client";
-
 import React from "react";
-import { useLocale, useTranslations } from "next-intl";
-import { usePredictionStore } from "@/components/variableState";
-import { usePlayerStore } from "@/components/variableState";
-import { usePcStore } from "@/components/variableState";
 import Image from "next/image";
 import rockImage from "../../../../public/icons/rock.png";
 import paperImage from "../../../../public/icons/paper.png";
 import scissorsImage from "../../../../public/icons/scissors.png";
 import altImage from "../../../../public/icons/undefined.png";
 
-const Result = () => {
-  // const t = useTranslations("result");
-  const { prediction } = usePredictionStore();
-  const { player, setPlayer } = usePlayerStore();
-  const { pc, setPc } = usePcStore();
+function page({ searchParams }: { searchParams: { selectedValue: string } }) {
+  console.log(searchParams);
 
-  const keyValuePairs = prediction.split(", ").map((pair) => pair.split(": "));
+  const value = searchParams.selectedValue;
 
-  const predictionObject: { [key: string]: number } = {};
-  keyValuePairs.forEach(([key, value]) => {
-    predictionObject[key] = parseFloat(value);
-  });
+  console.log(value);
 
-  console.log(predictionObject.Rock);
-  console.log(predictionObject.Paper);
-  console.log(predictionObject.Scissors);
+  let player = {
+    choice: "Alt Image",
+    imageSrc: altImage as any,
+    imgAltText: "Alt Image",
+  };
 
-  const highestValueKey = findHighestValueKey(predictionObject);
-
-  if (highestValueKey === "Rock") {
-    setPlayer({
-      choice: highestValueKey,
-      imageSrc: rockImage,
-      imgAltText: "Rock",
-    });
-  } else if (highestValueKey === "Paper") {
-    setPlayer({
-      choice: highestValueKey,
-      imageSrc: paperImage,
-      imgAltText: "Paper",
-    });
-  } else if (highestValueKey === "Scissors") {
-    setPlayer({
-      choice: highestValueKey,
-      imageSrc: scissorsImage,
-      imgAltText: "Scissors",
-    });
-  } else {
-    setPlayer({
-      choice: highestValueKey,
-      imageSrc: altImage,
-      imgAltText: "Alt Image",
-    });
-  }
-  //calculation random value as a PC Choice
-  const aiValue = Math.floor(Math.random() * 3) + 1;
-
-  if (aiValue === 1) {
-    setPc({
+  if (value === "Rock") {
+    player = {
       choice: "Rock",
       imageSrc: rockImage,
-      imgAltText: "Rock",
-    });
-  } else if (aiValue === 2) {
-    setPc({
+      imgAltText: "Rock Image",
+    };
+  }
+  if (value === "Paper") {
+    player = {
       choice: "Paper",
       imageSrc: paperImage,
-      imgAltText: "Paper",
-    });
-  } else if (aiValue === 3) {
-    setPc({
+      imgAltText: "Paper Image",
+    };
+  }
+  if (value === "Scissors") {
+    player = {
+      choice: "Scissors",
+      imageSrc: { scissorsImage },
+      imgAltText: "Scissors Image",
+    };
+  }
+  const pcValue = Math.floor(Math.random() * 3) + 1;
+
+  let pc = {
+    choice: "Alt Image",
+    imageSrc: altImage as any,
+    imgAltText: "Alt Image",
+  };
+
+  if (pcValue === 1) {
+    pc = {
+      choice: "Rock",
+      imageSrc: { rockImage },
+      imgAltText: "Rock Image",
+    };
+  }
+  if (pcValue === 2) {
+    pc = {
+      choice: "Paper",
+      imageSrc: paperImage,
+      imgAltText: "Paper Image",
+    };
+  }
+  if (pcValue === 3) {
+    pc = {
       choice: "Scissors",
       imageSrc: scissorsImage,
-      imgAltText: "Scissors",
-    });
-  } else {
-    setPc({
-      choice: "AltImage",
-      imageSrc: altImage,
-      imgAltText: "Alt Image",
-    });
+      imgAltText: "Scissors Image",
+    };
   }
 
-  //deciding Winner
   const winner = determineWinner(player.choice, pc.choice);
 
   return (
     <div className="mx-auto flex h-full w-[60vw] flex-col items-center">
-      <div className="flex flex-row">
-        <div className="m-4 flex items-center text-center" id="playerChoice">
-          {highestValueKey && (
+      <div className="flex h-[50vh] flex-row items-center">
+        <div
+          className="m-4 flex flex-col items-center text-center"
+          id="playerChoice"
+        >
+          {value && (
             <Image
               src={player.imageSrc}
               alt={player.imgAltText}
@@ -99,17 +86,17 @@ const Result = () => {
               height={100}
             />
           )}
-          {highestValueKey && (
+          {value && (
             <p>
-              The AI predicts you said: {highestValueKey}.<br />
-              <span className="m-0 inline-flex italic">
-                (Calculated randomly.)
-              </span>
+              You chose: {value}.<br />
             </p>
           )}
         </div>
-        <div id="pcChoice" className="flex items-center">
-          {highestValueKey && (
+        <div
+          id="pcChoice"
+          className="m-4 flex flex-col items-center text-center"
+        >
+          {value && (
             <Image
               src={pc.imageSrc}
               alt={pc.imgAltText}
@@ -117,19 +104,15 @@ const Result = () => {
               height={100}
             />
           )}
-          {highestValueKey && <p>It chose: {pc.choice}</p>}
+          {value && <p>It chose: {pc.choice}</p>}
         </div>
       </div>
-      {highestValueKey && <p>And the winner is: {winner}</p>}
+      {value && <p>And the winner is: {winner}</p>}
     </div>
   );
-};
-
-export default Result;
-
-function findHighestValueKey(obj: { [key: string]: number }): string {
-  return Object.keys(obj).reduce((a, b) => (obj[a] > obj[b] ? a : b));
 }
+
+export default page;
 
 function determineWinner(playerChoice: string, pcChoice: string) {
   if (playerChoice === pcChoice) {
