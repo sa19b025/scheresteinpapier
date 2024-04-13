@@ -11,9 +11,7 @@ function MousegamePage() {
   const resultUrl = "/" + locale + "/result";
   return (
     <div>
-      <p className="flex items-center justify-center p-3">
-        Choose your weapon:
-      </p>
+      <p className="flex items-center justify-center p-3">{t("description")}</p>
       <div className="flex items-center justify-center gap-3">
         <Link
           href={{
@@ -24,8 +22,13 @@ function MousegamePage() {
           }}
         >
           <div className="rounded border p-6">
-            <Image src={rockImage} alt="Rock" width="450" height="450" />
-            <p className="flex items-center justify-center">Rock</p>
+            <Image
+              src={rockImage}
+              alt={t("altRock")}
+              width="450"
+              height="450"
+            />
+            <p className="flex items-center justify-center">{t("rock")}</p>
           </div>
         </Link>
         <Link
@@ -37,8 +40,13 @@ function MousegamePage() {
           }}
         >
           <div className="rounded border p-6">
-            <Image src={paperImage} alt="Rock" width="450" height="450" />
-            <p className="flex items-center justify-center">Paper</p>
+            <Image
+              src={paperImage}
+              alt={t("altPaper")}
+              width="450"
+              height="450"
+            />
+            <p className="flex items-center justify-center">{t("paper")}</p>
           </div>
         </Link>
         <Link
@@ -50,8 +58,13 @@ function MousegamePage() {
           }}
         >
           <div className="rounded border p-6">
-            <Image src={scissorsImage} alt="Rock" width="450" height="450" />
-            <p className="flex items-center justify-center">Scissors</p>
+            <Image
+              src={scissorsImage}
+              alt={t("altScissors")}
+              width="450"
+              height="450"
+            />
+            <p className="flex items-center justify-center">{t("scissors")}</p>
           </div>
         </Link>
       </div>

@@ -8,13 +8,14 @@ function KeyboardgamePage() {
   const resultUrl = "/" + locale + "/result";
 
   addEventListener("keydown", (e) => {
-    if (e.key === "r") {
+    const key = e.key.toLowerCase();
+    if (key === "r") {
       window.location.href = resultUrl + "?selectedValue=Rock";
     }
-    if (e.key === "p") {
+    if (key === "p") {
       window.location.href = resultUrl + "?selectedValue=Paper";
     }
-    if (e.key === "s") {
+    if (key === "s") {
       window.location.href = resultUrl + "?selectedValue=Scissors";
     }
   });

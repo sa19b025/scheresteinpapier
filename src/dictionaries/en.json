@@ -31,7 +31,7 @@
     "altPaper": "Paper Image",
     "altScissors": "Scissors Image"
   },
-  "keyboardgame": {
+  "keyboardgamecomponent": {
     "description": "This is the keyboard input mode, press the key for your choice: Rock (R), Paper (P), Scissors (S).",
     "rock": "Rock",
     "paper": "Paper",

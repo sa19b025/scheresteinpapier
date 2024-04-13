@@ -50,7 +50,7 @@ function page({ searchParams }: { searchParams: { selectedValue: string } }) {
   if (pcValue === 1) {
     pc = {
       choice: "Rock",
-      imageSrc: { rockImage },
+      imageSrc: rockImage,
       imgAltText: "Rock Image",
     };
   }
