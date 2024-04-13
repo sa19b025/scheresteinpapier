@@ -35,7 +35,7 @@ function page({ searchParams }: { searchParams: { selectedValue: string } }) {
   if (value === "Scissors") {
     player = {
       choice: "Scissors",
-      imageSrc: { scissorsImage },
+      imageSrc: scissorsImage,
       imgAltText: "Scissors Image",
     };
   }
