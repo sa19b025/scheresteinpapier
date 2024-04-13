@@ -3,7 +3,7 @@
     "title": "Rock Paper Scissors",
     "mouseText": "Mouse",
     "keyboardText": "Keyboard",
-    "aiText": "Webcam",
+    "cameraText": "Webcam",
     "de": "German",
     "en": "English"
   },
@@ -22,7 +22,15 @@
     "rulesTitle": "Rules:",
     "rules": "Rock beats scissors, scissors cut paper, paper wraps rock."
   },
-  "mousegame": {},
+  "mousegame": {
+    "description": "This is the mouse input mode, click on the image for your choice: Rock, Paper or Scissors.",
+    "rock": "Rock",
+    "paper": "Paper",
+    "scissors": "Scissors",
+    "altRock": "Rock Image",
+    "altPaper": "Paper Image",
+    "altScissors": "Scissors Image"
+  },
   "keyboardgame": {
     "description": "This is the keyboard input mode, press the key for your choice: Rock (R), Paper (P), Scissors (S).",
     "rock": "Rock",
