@@ -42,7 +42,6 @@
   },
   "aigame": {
     "title": "Game",
-    "description": "This is the game page",
     "kamera": "Shutter",
     "predictionText": "AI Prediction: "
   },
@@ -50,8 +49,11 @@
     "title": "Result",
     "description": "This is the result page"
   },
+  "PredictionComponent": {
+    "captureButton": "Capture Image"
+  },
   "resultButton": {
-    "resultButton": "Next"
+    "btnText": "Continue"
   },
   "language": {
     "altText": "German Flag",

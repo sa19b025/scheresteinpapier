@@ -41,8 +41,6 @@
     "altScissors": "Schere Bild"
   },
   "aigame": {
-    "title": "Spiel",
-    "description": "Dies ist die Spiel-Seite",
     "kamera": "Auslöser",
     "predictionText": "Schätzung der KI: "
   },
@@ -51,7 +49,10 @@
     "description": "Dies ist die Ergebnis-Seite"
   },
   "resultButton": {
-    "resultButton": "Weiter"
+    "btnText": "Weiter"
+  },
+  "PredictionComponent": {
+    "captureButton": "Weiter"
   },
   "language": {
     "altText": "Englische Flagge",

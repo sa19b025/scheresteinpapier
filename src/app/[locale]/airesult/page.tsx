@@ -6,12 +6,12 @@ import { usePredictionStore } from "@/components/variableState";
 import { usePlayerStore } from "@/components/variableState";
 import { usePcStore } from "@/components/variableState";
 import Image from "next/image";
-import rockImage from "../../../../public/icons/rock.png";
-import paperImage from "../../../../public/icons/paper.png";
-import scissorsImage from "../../../../public/icons/scissors.png";
-import altImage from "../../../../public/icons/undefined.png";
+import rockImage from "../../../../public/rock.png";
+import paperImage from "../../../../public/paper.png";
+import scissorsImage from "../../../../public/scissors.png";
+import altImage from "../../../../public/undefined.png";
 
-const Result = () => {
+const AiResult = () => {
   const t = useTranslations("result");
   const { prediction } = usePredictionStore();
   const { player, setPlayer } = usePlayerStore();
@@ -125,7 +125,7 @@ const Result = () => {
   );
 };
 
-export default Result;
+export default AiResult;
 
 function findHighestValueKey(obj: { [key: string]: number }): string {
   return Object.keys(obj).reduce((a, b) => (obj[a] > obj[b] ? a : b));

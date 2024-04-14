@@ -1,10 +1,11 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import React from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 
 const ResultButton = () => {
-  const resultUrl = "/de/result";
+  const locale = useLocale();
+  const resultUrl = "/" + locale + "/airesult";
   const t = useTranslations("resultButton");
   return (
     <>
