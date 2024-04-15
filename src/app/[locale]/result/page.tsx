@@ -1,43 +1,53 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "../../../components/ui/button";
 import rockImage from "../../../../public/icons/rock.png";
 import paperImage from "../../../../public/icons/paper.png";
 import scissorsImage from "../../../../public/icons/scissors.png";
 import altImage from "../../../../public/icons/undefined.png";
+import { useLocale, useTranslations } from "next-intl";
 
-function page({ searchParams }: { searchParams: { selectedValue: string } }) {
-  const value = searchParams.selectedValue;
+function Result({ searchParams }: { searchParams: { selectedValue: string } }) {
+  const playerValue = searchParams.selectedValue;
+
+  const t = useTranslations("result");
 
   let player = {
+    value: "Alt Image",
     choice: "Alt Image",
     imageSrc: altImage,
     imgAltText: "Alt Image",
   };
 
-  if (value === "Rock") {
+  if (playerValue === "Rock") {
     player = {
-      choice: "Rock",
+      value: "Rock",
+      choice: `${t("rock")}`,
       imageSrc: rockImage,
-      imgAltText: "Rock Image",
+      imgAltText: `${t("altRock")}`,
     };
   }
-  if (value === "Paper") {
+  if (playerValue === "Paper") {
     player = {
-      choice: "Paper",
+      value: "Paper",
+      choice: `${t("paper")}`,
       imageSrc: paperImage,
-      imgAltText: "Paper Image",
+      imgAltText: `${t("altPaper")}`,
     };
   }
-  if (value === "Scissors") {
+  if (playerValue === "Scissors") {
     player = {
-      choice: "Scissors",
+      value: "Scissors",
+      choice: `${t("scissors")}`,
       imageSrc: scissorsImage,
-      imgAltText: "Scissors Image",
+      imgAltText: `${t("altScissors")}`,
     };
   }
   const pcValue = Math.floor(Math.random() * 3) + 1;
 
   let pc = {
+    value: "Alt Image",
     choice: "Alt Image",
     imageSrc: altImage,
     imgAltText: "Alt Image",
@@ -45,27 +55,33 @@ function page({ searchParams }: { searchParams: { selectedValue: string } }) {
 
   if (pcValue === 1) {
     pc = {
-      choice: "Rock",
+      value: "Rock",
+      choice: `${t("rock")}`,
       imageSrc: rockImage,
-      imgAltText: "Rock Image",
+      imgAltText: `${t("altRock")}`,
     };
   }
   if (pcValue === 2) {
     pc = {
-      choice: "Paper",
+      value: "Paper",
+      choice: `${t("paper")}`,
       imageSrc: paperImage,
-      imgAltText: "Paper Image",
+      imgAltText: `${t("altPaper")}`,
     };
   }
   if (pcValue === 3) {
     pc = {
-      choice: "Scissors",
+      value: "Scissors",
+      choice: `${t("scissors")}`,
       imageSrc: scissorsImage,
-      imgAltText: "Scissors Image",
+      imgAltText: `${t("altScissors")}`,
     };
   }
 
-  const winner = determineWinner(player.choice, pc.choice);
+  const winner = DetermineWinner(player.value, pc.value);
+
+  const locale = useLocale();
+  const rootUrl = "/" + locale + "/";
 
   return (
     <div className="mx-auto flex h-full w-[60vw] flex-col items-center">
@@ -74,7 +90,7 @@ function page({ searchParams }: { searchParams: { selectedValue: string } }) {
           className="m-4 flex flex-col items-center text-center"
           id="playerChoice"
         >
-          {value && (
+          {playerValue && (
             <Image
               src={player.imageSrc}
               alt={player.imgAltText}
@@ -82,9 +98,10 @@ function page({ searchParams }: { searchParams: { selectedValue: string } }) {
               height={100}
             />
           )}
-          {value && (
-            <p>
-              You chose: {value}.<br />
+          {playerValue && (
+            <p className="mt-3 text-xl">
+              {t("plChoice")} {player.choice}
+              <br />
             </p>
           )}
         </div>
@@ -92,7 +109,7 @@ function page({ searchParams }: { searchParams: { selectedValue: string } }) {
           id="pcChoice"
           className="m-4 flex flex-col items-center text-center"
         >
-          {value && (
+          {playerValue && (
             <Image
               src={pc.imageSrc}
               alt={pc.imgAltText}
@@ -100,27 +117,42 @@ function page({ searchParams }: { searchParams: { selectedValue: string } }) {
               height={100}
             />
           )}
-          {value && <p>It chose: {pc.choice}</p>}
+          {playerValue && (
+            <p className="mt-3 text-xl">
+              {t("compChoice")} {pc.choice}
+            </p>
+          )}
         </div>
       </div>
-      {value && <p>And the winner is: {winner}</p>}
+      {playerValue && (
+        <>
+          <p className="mb-3 text-xl font-semibold">{t("result")}</p>
+          <div className="text-4xl font-semibold">{winner}</div>
+        </>
+      )}
+      <div className="mt-3 flex items-center text-center">
+        <Link href={rootUrl}>
+          <Button>{t("playAgainButton")}</Button>
+        </Link>
+      </div>
     </div>
   );
 }
 
-export default page;
+export default Result;
 
-function determineWinner(playerChoice: string, pcChoice: string) {
+function DetermineWinner(playerChoice: string, pcChoice: string) {
+  const t = useTranslations("result");
   if (playerChoice === pcChoice) {
-    return "Tie";
+    return `${t("draw")}`;
   }
   switch (playerChoice) {
     case "Rock":
-      return pcChoice === "Scissors" ? "Player wins" : "PC wins";
+      return pcChoice === "Scissors" ? `${t("win")}` : `${t("lose")}`;
     case "Paper":
-      return pcChoice === "Rock" ? "Player wins" : "PC wins";
+      return pcChoice === "Rock" ? `${t("win")}` : `${t("lose")}`;
     case "Scissors":
-      return pcChoice === "Paper" ? "Player wins" : "PC wins";
+      return pcChoice === "Paper" ? `${t("win")}` : `${t("lose")}`;
     default:
       return "Invalid input";
   }

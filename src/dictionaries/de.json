@@ -36,21 +36,17 @@
     "scissors": "Schere",
     "altRock": "Stein Bild",
     "altPaper": "Papier Bild",
-    "altScissors": "Schere Bild"
+    "altScissors": "Schere Bild",
+    "rockKeyAltImage": "Bild einer R-Taste",
+    "paperKeyAltImage": "Bild einer P-Taste",
+    "scissorsKeyAltImage": "Bild einer S-Taste"
   },
   "cameragame": {
     "descriptionA": "Dies ist der Webcam-Eingabemodus, drücken Sie die Taste, um ein Bild Ihrer Wahl aufzunehmen: Stein, Papier oder Schere.",
     "descriptionB": "Nehmen Sie das Bild auf und lassen Sie die KI raten, was Sie halten!",
-    "descriptionC": "Es wird dann eine zufällige Auswahl für den Computer bestimmt und dann das Ergebnis angezeigt.",
-    "rock": "Stein",
-    "paper": "Papier",
-    "scissors": "Schere",
-    "altRock": "Stein Bild",
-    "altPaper": "Papier Bild",
-    "altScissors": "Schere Bild"
+    "descriptionC": "Es wird dann eine zufällige Auswahl für den Computer bestimmt und dann das Ergebnis angezeigt."
   },
   "webaicomp": {
-    "description": "Dies ist der WebAI-Eingabemodus, klicken Sie auf Ihre Wahl: Stein, Papier, Schere.",
     "rock": "Stein",
     "paper": "Papier",
     "scissors": "Schere",
@@ -63,9 +59,19 @@
     "retryButton": "Erneut versuchen"
   },
   "result": {
-    "title": "Ergebnis",
-    "description": "Dies ist die Ergebnis-Seite",
-    "paper": "Papier"
+    "plChoice": "Deine Wahl: ",
+    "compChoice": "Computer Wahl: ",
+    "result": "Ergebnis: ",
+    "win": "Du hast gewonnen!",
+    "lose": "Du hast leider verloren!",
+    "draw": "Es ist Unentschieden!",
+    "rock": "Stein",
+    "paper": "Papier",
+    "scissors": "Schere",
+    "altRock": "Stein Bild",
+    "altPaper": "Papier Bild",
+    "altScissors": "Schere Bild",
+    "playAgainButton": "Nochmal spielen"
   },
   "resultButton": {
     "btnText": "Weiter"

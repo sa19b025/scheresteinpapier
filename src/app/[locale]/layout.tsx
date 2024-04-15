@@ -10,7 +10,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Rock paper scissors",
-  description: "",
+  description:
+    "Here you can play rock paper scissors, against the computer. You can choose between three input variants: Mouse, Keyboard and Webcam Have fun!",
 };
 
 export default function LocaleLayout({
