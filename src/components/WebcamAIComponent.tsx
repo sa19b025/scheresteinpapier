@@ -68,7 +68,21 @@ const WebcamComponent = () => {
       {predicted && (
         <>
           <div className="flex-col items-center gap-3 text-center">
-            <p>{t("predictionText") + `${predicted}`}</p>
+            {predicted === "Rock" && (
+              <p>
+                {t("predictionText")} + {t("rock")}
+              </p>
+            )}
+            {predicted === "Paper" && (
+              <p>
+                {t("predictionText")} + {t("paper")}
+              </p>
+            )}
+            {predicted === "Scissors" && (
+              <p>
+                {t("predictionText")} {t("scissors")}
+              </p>
+            )}
             <div className="flex flex-col items-center">
               <Link href={againUrl}>
                 <Button className="mt-3">{t("retryButton")}</Button>
