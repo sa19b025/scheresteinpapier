@@ -6,15 +6,11 @@ import scissorsImage from "../../../../public/icons/scissors.png";
 import altImage from "../../../../public/icons/undefined.png";
 
 function page({ searchParams }: { searchParams: { selectedValue: string } }) {
-  console.log(searchParams);
-
   const value = searchParams.selectedValue;
-
-  console.log(value);
 
   let player = {
     choice: "Alt Image",
-    imageSrc: altImage as any,
+    imageSrc: altImage,
     imgAltText: "Alt Image",
   };
 
@@ -43,7 +39,7 @@ function page({ searchParams }: { searchParams: { selectedValue: string } }) {
 
   let pc = {
     choice: "Alt Image",
-    imageSrc: altImage as any,
+    imageSrc: altImage,
     imgAltText: "Alt Image",
   };
 

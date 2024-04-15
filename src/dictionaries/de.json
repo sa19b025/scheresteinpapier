@@ -3,9 +3,7 @@
     "title": "Schere Stein Papier",
     "mouseText": "Maus",
     "keyboardText": "Tastatur",
-    "cameraText": "Kamera",
-    "de": "Deutsch",
-    "en": "Englisch"
+    "cameraText": "Kamera"
   },
   "footer": {
     "project": "Bachelorprojekt"
@@ -40,22 +38,44 @@
     "altPaper": "Papier Bild",
     "altScissors": "Schere Bild"
   },
-  "aigame": {
-    "kamera": "Auslöser",
-    "predictionText": "Schätzung der KI: "
+  "cameragame": {
+    "descriptionA": "Dies ist der Webcam-Eingabemodus, drücken Sie die Taste, um ein Bild Ihrer Wahl aufzunehmen: Stein, Papier oder Schere.",
+    "descriptionB": "Nehmen Sie das Bild auf und lassen Sie die KI raten, was Sie halten!",
+    "descriptionC": "Es wird dann eine zufällige Auswahl für den Computer bestimmt und dann das Ergebnis angezeigt.",
+    "rock": "Stein",
+    "paper": "Papier",
+    "scissors": "Schere",
+    "altRock": "Stein Bild",
+    "altPaper": "Papier Bild",
+    "altScissors": "Schere Bild"
+  },
+  "webaicomp": {
+    "description": "Dies ist der WebAI-Eingabemodus, klicken Sie auf Ihre Wahl: Stein, Papier, Schere.",
+    "rock": "Stein",
+    "paper": "Papier",
+    "scissors": "Schere",
+    "altRock": "Stein Bild",
+    "altPaper": "Papier Bild",
+    "altScissors": "Schere Bild",
+    "captureButton": "Auslösen",
+    "resultPageButton": "Weiter",
+    "predictionText": "Schätzung der KI: ",
+    "retryButton": "Erneut versuchen"
   },
   "result": {
     "title": "Ergebnis",
-    "description": "Dies ist die Ergebnis-Seite"
+    "description": "Dies ist die Ergebnis-Seite",
+    "paper": "Papier"
   },
   "resultButton": {
     "btnText": "Weiter"
   },
-  "PredictionComponent": {
-    "captureButton": "Weiter"
-  },
   "language": {
     "altText": "Englische Flagge",
     "changeText": "Change to "
+  },
+  "error": {
+    "title": "Fehler",
+    "description": "Es ist ein Fehler aufgetreten."
   }
 }

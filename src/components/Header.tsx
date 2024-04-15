@@ -9,7 +9,7 @@ export default function Header() {
   const t = useTranslations("header");
   const mouseUrl = "/" + locale + "/mousegame";
   const keyboardUrl = "/" + locale + "/keyboardgame";
-  const aiUrl = "/" + locale + "/aigame";
+  const aiUrl = "/" + locale + "/cameragame";
 
   return (
     <header className="align-center container mx-auto flex h-[10vh] items-center justify-around text-2xl">

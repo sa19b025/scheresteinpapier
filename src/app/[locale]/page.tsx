@@ -10,7 +10,7 @@ export default function Index() {
   const locale = useLocale();
   const mouseUrl = "/" + locale + "/mousegame";
   const keyboardUrl = "/" + locale + "/keyboardgame";
-  const aiUrl = "/" + locale + "/aigame";
+  const cameraUrl = "/" + locale + "/cameragame";
   return (
     <div className="text-center">
       <div className="flex h-[80vh] items-center justify-center">
@@ -40,7 +40,7 @@ export default function Index() {
                 <p className="mt-5">{t("keyboardText")}</p>
               </div>
             </Link>
-            <Link href={aiUrl}>
+            <Link href={cameraUrl}>
               <div id="cameraTile" className="rounded border p-24">
                 <Image
                   src={cameraImage}
