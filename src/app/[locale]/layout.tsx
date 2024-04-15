@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-sync-scripts */
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { NextIntlClientProvider, useMessages } from "next-intl";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +25,6 @@ export default function LocaleLayout({
   const messages = useMessages();
   return (
     <>
-      <SpeedInsights />;
       <html lang={locale}>
         <head>
           <link
@@ -106,6 +105,7 @@ export default function LocaleLayout({
           <main className="h-[80vh] px-3">
             <NextIntlClientProvider locale={locale} messages={messages}>
               {children}
+              <SpeedInsights />;
             </NextIntlClientProvider>
           </main>
           <Footer />
