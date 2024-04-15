@@ -18,7 +18,10 @@ export default function Index() {
           <h1 className="text-xl font-semibold">{t("title")}</h1>
           <p className="my-4">{t("description")}</p>
           <div className="flex w-full items-center justify-center gap-3 ">
-            <Link href={mouseUrl}>
+            <Link
+              href={mouseUrl}
+              className="hover:rounded hover:bg-slate-100 hover:drop-shadow-xl"
+            >
               <div id="mouseTile" className="rounded border p-24">
                 <Image
                   src={mouseImage}
@@ -29,7 +32,10 @@ export default function Index() {
                 <p className="mt-5">{t("mouseText")}</p>
               </div>
             </Link>
-            <Link href={keyboardUrl}>
+            <Link
+              href={keyboardUrl}
+              className="hover:rounded hover:bg-slate-100 hover:drop-shadow-xl"
+            >
               <div id="keyboardTile" className="rounded border p-24">
                 <Image
                   src={keyboardImage}
@@ -40,7 +46,10 @@ export default function Index() {
                 <p className="mt-5">{t("keyboardText")}</p>
               </div>
             </Link>
-            <Link href={cameraUrl}>
+            <Link
+              href={cameraUrl}
+              className="hover:rounded hover:bg-slate-100 hover:drop-shadow-xl"
+            >
               <div id="cameraTile" className="rounded border p-24">
                 <Image
                   src={cameraImage}

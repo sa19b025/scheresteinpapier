@@ -20,6 +20,7 @@ function MousegamePage() {
               selectedValue: "Rock",
             },
           }}
+          className="hover:rounded hover:bg-slate-100 hover:drop-shadow-xl"
         >
           <div className="rounded border p-6">
             <Image
@@ -38,6 +39,7 @@ function MousegamePage() {
               selectedValue: "Paper",
             },
           }}
+          className="hover:rounded hover:bg-slate-100 hover:drop-shadow-xl"
         >
           <div className="rounded border p-6">
             <Image
@@ -56,6 +58,7 @@ function MousegamePage() {
               selectedValue: "Scissors",
             },
           }}
+          className="hover:rounded hover:bg-slate-100 hover:drop-shadow-xl"
         >
           <div className="rounded border p-6">
             <Image
