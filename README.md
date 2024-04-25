@@ -1,60 +1,7 @@
-# Rock Paper Scissors - Enhanced with AI
-
-Welcome to the Rock Paper Scissors Webapp, an innovative, browser-based adaptation of the timeless game, built with Next.js 14. This application uses advanced AI for input recognition, while gameplay pits you against programmed computer moves.
-
-> **Note:** A German version of this description is available below.
-
-## Features
-
-- **Multiple Input Methods**: Play using the method that suits you best:
-
-  - **Mouse**: A classic point-and-click interface.
-  - **Keyboard**: Responsive gameplay using keyboard shortcuts.
-  - **Webcam**: Leverage state-of-the-art AI to interpret your hand gestures through real-time image recognition powered by TensorFlow.js.
-
-- **AI Integration for Gesture Recognition**: The webcam mode utilizes TensorFlow.js to analyze your hand gestures and accurately determine your move (rock, paper, or scissors).
-
-- **Localized Experience**: Available in both German and English, facilitated by the `next-intl` package, making the game accessible to a diverse set of players.
-
-- **Responsive and Stylish UI**: Designed with Tailwind CSS for a clean, modern look that adjusts seamlessly across devices.
-
-- **Cutting-Edge Technology**: Incorporates the latest Next.js 14 features, including the App Router. The application is fully implemented in TypeScript to enhance code quality and maintainability.
-
-## How It Works
-
-1. **Select Input Method**: Begin by choosing how you want to interact with the game: mouse, keyboard, or webcam.
-2. **Make Your Move**: In webcam mode, show your choice of rock, paper, or scissors to the camera. The TensorFlow.js model processes this input to identify your gesture.
-3. **Computer’s Turn**: A computer-generated move is created randomly at the same time.
-4. **Determine the Winner**: The app compares both choices based on classic Rock Paper Scissors rules to decide the winner.
-
-## Getting Started
-
-To run this application locally:
-
-\`\`\`bash
-git clone https://github.com/t-scheiber/rockpaperscissors.git
-cd rockpaperscissors
-npm install
-npm run dev
-\`\`\`
-
-Visit \`http://localhost:3000\` to enjoy the game! Or play directly online at [schere-stein-papier.thomasscheiber.com](https://schere-stein-papier.thomasscheiber.com/).
-
-## Technologies Used
-
-- **Next.js 14**: Empowers server-side rendering and static generation.
-- **TypeScript**: Provides strong typing to reduce runtime errors.
-- **Tailwind CSS**: Ensures a responsive, mobile-first design.
-- **TensorFlow.js**: Facilitates real-time hand gesture recognition.
-- **Next-Intl**: Offers comprehensive internationalization support.
-
-This application showcases the integration of modern web technologies and AI, providing a unique and engaging user experience. Test your strategy against the computer's random moves and enjoy a modern twist on the classic game of Rock Paper Scissors!
-
----
-
 # Schere Stein Papier - Erweitert durch KI
 
-Willkommen bei der Web-App "Schere Stein Papier", einer innovativen browserbasierten Adaption des zeitlosen Spiels, entwickelt mit Next.js 14. Diese Anwendung nutzt fortschrittliche KI für die Eingabeerkennung, während das Gameplay gegen zufällige Züge des Computers stattfindet.
+Willkommen bei der Web-App "Schere Stein Papier", einer innovativen browserbasierten Adaption des zeitlosen Spiels, entwickelt mit Next.js 14.
+Diese Anwendung nutzt fortschrittliche KI für die Eingabeerkennung, während das Gameplay gegen zufällige Züge des Computers stattfindet.
 
 ## Funktionen
 
@@ -84,7 +31,7 @@ Willkommen bei der Web-App "Schere Stein Papier", einer innovativen browserbasie
 Um diese Anwendung lokal auszuführen:
 
 \`\`\`bash
-git clone https://github.com/t-scheiber/rockpaperscissors.git
+git clone https://github.com/sa19b025/scheresteinpapier.git
 cd rockpaperscissors
 npm install
 npm run dev
